@@ -1,0 +1,9 @@
+.idea
+submission.csv
+models
+result
+val_result
+out_data
+out_tabnet_data
+data.pkl
+val_predicted.csv
