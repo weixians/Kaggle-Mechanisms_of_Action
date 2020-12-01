@@ -198,7 +198,7 @@ def work(test_only, write_val=False):
     data_tabnet, data_transfer, data_shallow = None, None, None
     if create_data_tabnet:
         print('Create data for type tabnet')
-        from moa_tabnet_preprocess_helper import TabnetPreprocessHelper
+        from moa_tabnet_data_preprocess_helper import TabnetPreprocessHelper
         helper = TabnetPreprocessHelper('../input', out_tabnet_data_dir, not test_only, read_directly)
         data_tabnet = helper.process()
 
@@ -208,7 +208,7 @@ def work(test_only, write_val=False):
     if create_data_transfer:
         print('Create data for type transfer')
         # data_transfer = create_data(data_preprocess_param_transfer)
-        from moa_pytorch_preprocess_helper import PytorchPreprocessHelper
+        from moa_torch_data_preprocess_helper import PytorchPreprocessHelper
         helper = PytorchPreprocessHelper('../input', out_data_dir, not test_only, read_directly)
         data_transfer = helper.process(pytorch_preprocess_param, base_seed)
 
